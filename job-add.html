@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jobbatical Clone</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/stylesheets/job-add.css">
+</head>
+
+<body>
+
+  <header class="container">
+    <h1>Header</h1>
+  </header>
+
+  <section class="container hero">
+    <div class="form-container col-xs-offset-2 col-xs-8">
+      <div class="form-header">
+        <h1>Add a job</h1>
+      </div>
+      <form action="#" method="post">
+        <!-- <label class="col-sm-6" for="job-title">Job title</label>
+        <label class="col-sm-6" for="date-limit">Date limit</label> -->
+        <div class="double-field">
+          <div class="form-group">
+            <label for="job-title">Job title</label>
+            <input class="form-control" type="text" name="job-title" id="job-title">
+          </div><!--
+          --><div class="form-group">
+            <label for="date-limit">Date limit</label>
+            <input class="form-control" type="date" name="date-limit" id="date-limit">
+          </div>
+        </div>
+
+        <div class="double-field">
+          <div class="form-group">
+            <label for="company-name">Company name</label>
+            <input class="form-control" type="text" name="company-name" id="company-name">
+          </div><!--
+          --><div class="form-group">
+            <label for="location">Location</label>
+            <input class="form-control" type="text" name="location" id="location">
+          </div>
+        </div>
+
+        <div class="double-field">
+          <div class="form-group">
+            <label for="min-salary">Minimum salary</label>
+            <input class="form-control" type="text" name="min-salary" id="min-salary">
+          </div><!--
+          --><div class="form-group">
+            <label for="max-salary">Maximum salary</label>
+            <input class="form-control" type="text" name="max-salary" id="max-salary">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="company-description">Company description</label>
+          <textarea class="form-control" name="company-description" id="company-description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="job-description">Job description</label>
+          <textarea class="form-control" name="job-description" id="job-description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="responsibilities">Responsibilities</label>
+          <textarea class="form-control" name="responsibilities" id="responsibilities"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="requirements">Requirements</label>
+          <textarea class="form-control" name="requirements" id="requirements"></textarea>
+        </div>
+
+        <div class="form-footer form-group pull-right">
+          <input class="btn btn-jobbatical" type="submit" value="Save draft">
+          <input class="btn btn-jobbatical" type="submit" value="Post offer">
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer class="container">
+    <h6>Footer</h6>
+  </footer>
+
+</body>
+
+</html>
