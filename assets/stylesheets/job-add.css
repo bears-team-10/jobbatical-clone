@@ -31,19 +31,6 @@ textarea {
   color: #1c75bc;
 }
 
-.double-field .form-group {
-  display: inline-block;
-  width: 50%;
-}
-
-.double-field .form-group:first-child {
-  padding-right: 10px;
-}
-
-.double-field .form-group:last-child {
-  padding-left: 10px;
-}
-
 .form-control {
   border: 0 none #fff;
   border-radius: 0;
@@ -52,7 +39,20 @@ textarea {
 
 .btn-jobbatical {
   border-radius: 0;
-  color: white;
+  color: #fff;
   background-color: #03d091;
+  text-transform: uppercase;
+}
+
+.team-info {
+  margin-bottom: 10px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-nav li a {
+  color: #666;
   text-transform: uppercase;
 }
