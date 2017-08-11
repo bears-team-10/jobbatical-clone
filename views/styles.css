@@ -1,6 +1,11 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 header {
@@ -59,4 +64,14 @@ section {
     color: blue;
     text-transform: uppercase;
     text-align: center;
+}
+
+.feature-card {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.job-title {
+    font-size: 28px;
+    font-weight: bold;
 }
