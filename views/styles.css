@@ -75,3 +75,9 @@ section {
     font-size: 28px;
     font-weight: bold;
 }
+
+.view-jobs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
