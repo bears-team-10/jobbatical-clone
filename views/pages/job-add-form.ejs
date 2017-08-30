@@ -1,134 +1,63 @@
-
-  <header>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="#"><img src="#" alt="logo"></a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">My Saved Jobs</a></li>
-          <li><a href="#">My Applications</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="#" alt="profile" class="img-circle"> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <section class="container-fluid hero">
-    <div class="form-container col-xs-offset-2 col-xs-8">
-      <div class="form-header">
-        <h1>Add a job</h1>
-      </div>
-      <form action="#" method="post">
-        <div class="row">
-          <div class="form-group col-sm-6">
-            <label for="job-title">Job title</label>
-            <input class="form-control" type="text" name="job-title" id="job-title">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label for="date-limit">Date limit</label>
-            <input class="form-control" type="date" name="date-limit" id="date-limit">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="form-group col-sm-6">
-            <label for="company-name">Company name</label>
-            <input class="form-control" type="text" name="company-name" id="company-name">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label for="location">Location</label>
-            <input class="form-control" type="text" name="location" id="location">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="form-group col-sm-6">
-            <label for="min-salary">Minimum salary</label>
-            <input class="form-control" type="number" name="min-salary" id="min-salary">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label for="max-salary">Maximum salary</label>
-            <input class="form-control" type="number" name="max-salary" id="max-salary">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="company-description">Company description</label>
-          <textarea class="form-control" name="company-description" id="company-description"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="job-description">Job description</label>
-          <textarea class="form-control" name="job-description" id="job-description"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="responsibilities">Responsibilities</label>
-          <textarea class="form-control" name="responsibilities" id="responsibilities"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="requirements">Requirements</label>
-          <textarea class="form-control" name="requirements" id="requirements"></textarea>
-        </div>
-
-        <div class="form-footer form-group pull-right">
-          <input class="btn btn-jobbatical" type="submit" value="Save draft">
-          <input class="btn btn-jobbatical" type="submit" value="Post offer">
-        </div>
-
-      </form>
+<section class="container-fluid hero">
+  <div class="form-container col-xs-offset-2 col-xs-8">
+    <div class="form-header">
+      <h1>Add a job</h1>
     </div>
-  </section>
+    <form action="/add-job" method="post">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="job-title">Job title</label>
+          <input class="form-control" type="text" name="jobTitle" id="job-title">
+        </div>
 
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-2">
-        <h5>For talent</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Explore jobs</a></li>
-          <li><a href="#">My profile</a></li>
-          <li><a href="#">My saved jobs</a></li>
-        </ul>
+        <div class="form-group col-sm-6">
+          <label for="date-limit">Date limit</label>
+          <input class="form-control" type="date" name="date" id="date-limit">
+        </div>
       </div>
-      <div class="col-sm-2 col-sm-offset-1">
-        <h5>For employers</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Post a job</a></li>
-        </ul>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="company-name">Company name</label>
+          <input class="form-control" type="text" name="companyName" id="company-name">
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="location">Location</label>
+          <input class="form-control" type="text" name="location" id="location">
+        </div>
       </div>
-      <div class="col-sm-2 col-sm-offset-1">
-        <h5>About us</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Linkedin</a></li>
-        </ul>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="salary">Salary</label>
+          <input class="form-control" type="number" name="salary" id="salary">
+        </div>
       </div>
-    </div>
-    <div class="row team-info">
-      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-        <span class="small">&copy; Bears Team 10</span>
-        <a class="small" href="mailto:hello@bearsteam10.com">hello@bearsteam10.com</a>
+
+      <div class="form-group">
+        <label for="company-description">Company description</label>
+        <textarea class="form-control" name="companyDescription" id="company-description"></textarea>
       </div>
-      <div class="col-xs-12 col-sm-4 text-right">
-        <a class="small" href="#">Terms of service</a>
-        <a class="small" href="#">Privacy policy</a>
+
+      <div class="form-group">
+        <label for="job-description">Job description</label>
+        <textarea class="form-control" name="jobDescription" id="job-description"></textarea>
       </div>
-    </div>
-  </footer>
+      <div class="form-group">
+        <label for="responsibilities">Responsibilities</label>
+        <textarea class="form-control" name="responsibilities" id="responsibilities"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="requirements">Requirements</label>
+        <textarea class="form-control" name="requirements" id="requirements"></textarea>
+      </div>
+
+      <div class="form-footer form-group pull-right">
+        <input class="btn btn-jobbatical" type="submit" value="Post offer">
+      </div>
+
+    </form>
+  </div>
+</section>

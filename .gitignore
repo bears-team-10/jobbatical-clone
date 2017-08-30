@@ -1,3 +1,4 @@
-node_modules/
-AppData/
+/node_modules
+/AppData
+config.js
 .env
