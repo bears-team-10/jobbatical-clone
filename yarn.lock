@@ -97,7 +97,7 @@ express-ejs-layouts@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/express-ejs-layouts/-/express-ejs-layouts-2.3.1.tgz#0cac7a9ce52f55cd567b43bdb39226e724ad50e7"
 
-express@^4.15.3:
+express@^4.15.4:
   version "4.15.4"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.4.tgz#032e2253489cf8fce02666beca3d11ed7a2daed1"
   dependencies:
@@ -224,9 +224,9 @@ mongodb@2.2.31:
     mongodb-core "2.1.15"
     readable-stream "2.2.7"
 
-mongoose@^4.10.8:
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.11.8.tgz#0d618ad22d33ed8d2497c060d2cad6491eb6a6a9"
+mongoose@^4.11.9:
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.11.9.tgz#58f89a72e75674d9bcdfa4e65ebe1b49b4477637"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"

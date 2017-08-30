@@ -6,17 +6,10 @@ require('dotenv').config();
 // load dependencies
 const express = require('express'),
     app = express(),
- // Job = require('./models/jobModel');
-// bodyParser = require('body-parser');
+    // bodyParser = require('body-parser');
     mongoose = require('mongoose'),
     expressLayouts = require('express-ejs-layouts'),
-    port = process.env.PORT || 3000;
-
-
-// const config = require('./config.js');
-// connect to database
-// const mLab = 'mongodb://' + config.db.user + ':' + config.db.password + config.db.host + config.db.name;
-// mongoose.connect(mLab);
+    port = process.env.PORT || 4000;
 
 
 // use body-parser
