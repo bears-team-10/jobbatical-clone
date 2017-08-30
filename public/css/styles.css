@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 150px 15px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-position: center;
+    background-image: url('../images/header.jpg');
+    color: #fff;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.super-title {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.landing-button {
+    text-transform: uppercase;
+    background-color: #1db6ef;
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 20px
+}
+
+@media (min-width: 768px) {
+    .landing-button {
+        width: auto;
+        margin-right: 30px
+    }
+}
+
+.landing-button-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sub-text {
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 30px;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.feature-card {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.job-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.view-jobs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

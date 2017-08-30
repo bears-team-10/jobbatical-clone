@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add express-ejs-layouts
+
+PATH: 
+  c:\program files (x86)\graphicsmagick-1.3.25-q16;C:\Program Files\ImageMagick-7.0.5-Q16;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Hewlett-Packard\SimplePass\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\platform-tools;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\tools;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files (x86)\git\cmd;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\wamp\bin\php\php5.4.16;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php5.6.25;C:\Program Files (x86)\Skype\Phone\;C:\Users\AJIBS\AppData\Roaming\npm;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\Users\AJIBS\Anaconda2;C:\Users\AJIBS\Anaconda2\Scripts;C:\Users\AJIBS\Anaconda2\Library\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\global_libs\apache-maven-3.1.0\bin;C:\Program Files (x86)\Google\google_appengine\;C:\Python27;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User\Scripts;C:\Users\AJIBS\AppData\Roaming\Composer\vendor\bin;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\ucrt;C:\Users\AJIBS\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\AJIBS\AppData\Roaming\npm;C:\Users\AJIBS\AppData\Local\Yarn\bin
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  6.11.2
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "bears-team-10-jobbatical-clone",
+    "version": "1.0.0",
+    "description": "clone of a jobs board app",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/bears-team-10/jobbatical-clone.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/bears-team-10/jobbatical-clone/issues"
+    },
+    "homepage": "https://github.com/bears-team-10/jobbatical-clone#readme",
+    "dependencies": {
+      "express": "^4.15.3",
+      "mongoose": "^4.10.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo ENOENT registry.npmjs.org:80
+      at Object.exports._errnoException (util.js:1020:11)
+      at errnoException (dns.js:33:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
