@@ -1,6 +1,7 @@
 'use strict';
 
-const Job = require('../models/jobModel');
+const Job = require('../models/jobModel'),
+    User = require('../models/userModel');
 
 
 module.exports = {
@@ -25,10 +26,9 @@ module.exports = {
         let job = new Job(req.body);
         job.save((err, doc) => {
             if (err) console.error(err);
-            if (doc){ res.send('job added'); }
+            if (!doc){ res.send('job not added'); }
+            else { res.status(201).send('job added!'); }
         });
-        //res.status(201).send('job added!');
-        //res.json(job);
     },
 
     showExplore: (req, res) => {
@@ -39,6 +39,16 @@ module.exports = {
                 res.json(jobs);
             }
         });
+    },
+
+    registerNewUser: (req, res) => {
+        let user = new User(req.body);
+
+        // hash password then save
+        // user.password = 
+        
+        user.save();
+        res.send('new user registered');
     }
 }
 

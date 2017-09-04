@@ -9,7 +9,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     expressLayouts = require('express-ejs-layouts'),
-    port = process.env.PORT || 4100;
+    port = process.env.PORT || 3000;
 
 
 // use body-parser
@@ -27,7 +27,7 @@ app.use(expressLayouts);
 
 
 // connect to database
-mongoose.connect(process.env.DB_URI);
+ mongoose.connect(process.env.DB_URI);
 
 // direct routes to router file
 app.use(require('./app/routes'));
