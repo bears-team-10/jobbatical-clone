@@ -28,6 +28,11 @@ section {
     padding-bottom: 80px;
 }
 
+footer {
+    margin-top: 40px;
+    padding-top: 60px;
+}
+
 .super-title {
     font-size: 60px;
     font-weight: 700;

@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js upgrade mongoose
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
 
 PATH: 
-  c:\program files (x86)\graphicsmagick-1.3.25-q16;C:\Program Files\ImageMagick-7.0.5-Q16;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Hewlett-Packard\SimplePass\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\platform-tools;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\tools;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files (x86)\git\cmd;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\wamp\bin\php\php5.4.16;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php5.6.25;C:\Program Files (x86)\Skype\Phone\;C:\Users\AJIBS\AppData\Roaming\npm;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\Users\AJIBS\Anaconda2;C:\Users\AJIBS\Anaconda2\Scripts;C:\Users\AJIBS\Anaconda2\Library\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\global_libs\apache-maven-3.1.0\bin;C:\Program Files (x86)\Google\google_appengine\;C:\Python27;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User\Scripts;C:\Users\AJIBS\AppData\Roaming\Composer\vendor\bin;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\ucrt;C:\Users\AJIBS\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\AJIBS\AppData\Roaming\npm;C:\Users\AJIBS\AppData\Local\Yarn\bin
+  c:\program files (x86)\graphicsmagick-1.3.25-q16;C:\Program Files\ImageMagick-7.0.5-Q16;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Hewlett-Packard\SimplePass\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\platform-tools;C:\Program Files (x86)\adt-bundle-windows-x86_64-20140321\sdk\tools;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files (x86)\git\cmd;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\wamp\bin\php\php5.4.16;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php5.6.25;C:\Program Files (x86)\Skype\Phone\;C:\Users\AJIBS\AppData\Roaming\npm;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\AJIBS\Anaconda2;C:\Users\AJIBS\Anaconda2\Scripts;C:\Users\AJIBS\Anaconda2\Library\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\global_libs\apache-maven-3.1.0\bin;C:\Program Files (x86)\Google\google_appengine\;C:\Python27;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User;C:\Users\AJIBS\AppData\Local\Enthought\Canopy\User\Scripts;C:\Users\AJIBS\AppData\Roaming\Composer\vendor\bin;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\AJIBS\AppData\Roaming\Dashlane\4.7.1.28771\ucrt;C:\Users\AJIBS\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\AJIBS\AppData\Roaming\npm;C:\Users\AJIBS\AppData\Local\Yarn\bin
 
 Yarn version: 
   0.27.5
@@ -33,12 +33,14 @@ npm manifest:
     },
     "homepage": "https://github.com/bears-team-10/jobbatical-clone#readme",
     "dependencies": {
+      "bcrypt": "^1.0.2",
       "body-parser": "^1.17.2",
       "dotenv": "^4.0.0",
       "ejs": "^2.5.7",
       "express": "^4.15.4",
       "express-ejs-layouts": "^2.3.1",
-      "mongoose": "4.10.8"
+      "jsonwebtoken": "^7.4.3",
+      "mongoose": "^4.11.10"
     }
   }
 
@@ -67,6 +69,10 @@ Lockfile:
     dependencies:
       lodash "^4.14.0"
   
+  base64url@2.0.0, base64url@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/base64url/-/base64url-2.0.0.tgz#eac16e03ea1438eff9423d69baa36262ed1f70bb"
+  
   bluebird@2.10.2:
     version "2.10.2"
     resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.10.2.tgz#024a5517295308857f14f91f1106fc3b555f446b"
@@ -89,6 +95,10 @@ Lockfile:
   bson@~1.0.4:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.4.tgz#93c10d39eaa5b58415cbc4052f3e53e562b0b72c"
+  
+  buffer-equal-constant-time@1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz#f8e71132f7ffe6e01a5c9697a4c6f3e48d5cc819"
   
   buffer-shims@~1.0.0:
     version "1.0.0"
@@ -141,6 +151,13 @@ Lockfile:
   dotenv@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
+  
+  ecdsa-sig-formatter@1.0.9:
+    version "1.0.9"
+    resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.9.tgz#4bc926274ec3b5abb5016e7e1d60921ac262b2a1"
+    dependencies:
+      base64url "^2.0.0"
+      safe-buffer "^5.0.1"
   
   ee-first@1.1.1:
     version "1.1.1"
@@ -223,6 +240,10 @@ Lockfile:
     version "0.5.0"
     resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.0.tgz#f474ca5e6a9246d6fd8e0953cfa9b9c805afa78e"
   
+  hoek@2.x.x:
+    version "2.16.3"
+    resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
+  
   hooks-fixed@2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/hooks-fixed/-/hooks-fixed-2.0.0.tgz#a01d894d52ac7f6599bbb1f63dfc9c411df70cba"
@@ -252,9 +273,53 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   
-  kareem@1.4.1:
-    version "1.4.1"
-    resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.4.1.tgz#ed76200044fa041ef32b4da8261e2553f1173531"
+  isemail@1.x.x:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/isemail/-/isemail-1.2.0.tgz#be03df8cc3e29de4d2c5df6501263f1fa4595e9a"
+  
+  joi@^6.10.1:
+    version "6.10.1"
+    resolved "https://registry.yarnpkg.com/joi/-/joi-6.10.1.tgz#4d50c318079122000fe5f16af1ff8e1917b77e06"
+    dependencies:
+      hoek "2.x.x"
+      isemail "1.x.x"
+      moment "2.x.x"
+      topo "1.x.x"
+  
+  jsonwebtoken@^7.4.3:
+    version "7.4.3"
+    resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-7.4.3.tgz#77f5021de058b605a1783fa1283e99812e645638"
+    dependencies:
+      joi "^6.10.1"
+      jws "^3.1.4"
+      lodash.once "^4.0.0"
+      ms "^2.0.0"
+      xtend "^4.0.1"
+  
+  jwa@^1.1.4:
+    version "1.1.5"
+    resolved "https://registry.yarnpkg.com/jwa/-/jwa-1.1.5.tgz#a0552ce0220742cd52e153774a32905c30e756e5"
+    dependencies:
+      base64url "2.0.0"
+      buffer-equal-constant-time "1.0.1"
+      ecdsa-sig-formatter "1.0.9"
+      safe-buffer "^5.0.1"
+  
+  jws@^3.1.4:
+    version "3.1.4"
+    resolved "https://registry.yarnpkg.com/jws/-/jws-3.1.4.tgz#f9e8b9338e8a847277d6444b1464f61880e050a2"
+    dependencies:
+      base64url "^2.0.0"
+      jwa "^1.1.4"
+      safe-buffer "^5.0.1"
+  
+  kareem@1.5.0:
+    version "1.5.0"
+    resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.5.0.tgz#e3e4101d9dcfde299769daf4b4db64d895d17448"
+  
+  lodash.once@^4.0.0:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   
   lodash@^4.14.0:
     version "4.17.4"
@@ -286,35 +351,39 @@ Lockfile:
     version "1.3.4"
     resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
   
-  mongodb-core@2.1.11:
-    version "2.1.11"
-    resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.11.tgz#1c38776ceb174997a99c28860eed9028da9b3e1a"
+  moment@2.x.x:
+    version "2.18.1"
+    resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+  
+  mongodb-core@2.1.15:
+    version "2.1.15"
+    resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.15.tgz#841f53b87ffff4c7458189c35c8ae827e1169764"
     dependencies:
       bson "~1.0.4"
       require_optional "~1.0.0"
   
-  mongodb@2.2.27:
-    version "2.2.27"
-    resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.27.tgz#34122034db66d983bcf6ab5adb26a24a70fef6e6"
+  mongodb@2.2.31:
+    version "2.2.31"
+    resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.31.tgz#1940445c661e19217bb3bf8245d9854aaef548db"
     dependencies:
       es6-promise "3.2.1"
-      mongodb-core "2.1.11"
+      mongodb-core "2.1.15"
       readable-stream "2.2.7"
   
-  mongoose@4.10.8:
-    version "4.10.8"
-    resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.10.8.tgz#31f44ed7884756f9fd9b7708ddcb3fcb4250f34e"
+  mongoose@^4.11.9:
+    version "4.11.9"
+    resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.11.9.tgz#58f89a72e75674d9bcdfa4e65ebe1b49b4477637"
     dependencies:
       async "2.1.4"
       bson "~1.0.4"
       hooks-fixed "2.0.0"
-      kareem "1.4.1"
-      mongodb "2.2.27"
+      kareem "1.5.0"
+      mongodb "2.2.31"
       mpath "0.3.0"
       mpromise "0.5.5"
       mquery "2.3.1"
       ms "2.0.0"
-      muri "1.2.1"
+      muri "1.2.2"
       regexp-clone "0.0.1"
       sliced "1.0.1"
   
@@ -335,13 +404,13 @@ Lockfile:
       regexp-clone "0.0.1"
       sliced "0.0.5"
   
-  ms@2.0.0:
+  ms@2.0.0, ms@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   
-  muri@1.2.1:
-    version "1.2.1"
-    resolved "https://registry.yarnpkg.com/muri/-/muri-1.2.1.tgz#ec7ea5ce6ca6a523eb1ab35bacda5fa816c9aa3c"
+  muri@1.2.2:
+    version "1.2.2"
+    resolved "https://registry.yarnpkg.com/muri/-/muri-1.2.2.tgz#63198132650db08a04cc79ccd00dd389afd2631c"
   
   negotiator@0.6.1:
     version "0.6.1"
@@ -419,7 +488,7 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
   
-  safe-buffer@~5.1.0:
+  safe-buffer@^5.0.1, safe-buffer@~5.1.0:
     version "5.1.1"
     resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
   
@@ -476,6 +545,12 @@ Lockfile:
     dependencies:
       safe-buffer "~5.1.0"
   
+  topo@1.x.x:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/topo/-/topo-1.1.0.tgz#e9d751615d1bb87dc865db182fa1ca0a5ef536d5"
+    dependencies:
+      hoek "2.x.x"
+  
   type-is@~1.6.15:
     version "1.6.15"
     resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.15.tgz#cab10fb4909e441c82842eafe1ad646c81804410"
@@ -498,8 +573,13 @@ Lockfile:
   vary@~1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.1.tgz#67535ebb694c1d52257457984665323f587e8d37"
+  
+  xtend@^4.0.1:
+    version "4.0.1"
+    resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:80
-      at errnoException (dns.js:28:10)
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+  Error: connect ETIMEDOUT 151.101.36.162:80
+      at Object.exports._errnoException (util.js:1020:11)
+      at exports._exceptionWithHostPort (util.js:1043:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1086:14)

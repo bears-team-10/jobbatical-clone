@@ -6,7 +6,6 @@ const mongoose = require('mongoose'),
 
 let userModel = new Schema ({
     firstName: String,
-    lastName: String,
     email: String,
     password: String
 });
