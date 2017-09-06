@@ -31,7 +31,7 @@ router.post('/authenticate', mainController.authenticateUser);
 
 
 // route middleware to verify a token
-// router.use( (req, res, next) => { })
+router.use( mainController.verifyToken );
 
 // show job form route
 router.get('/job-form', mainController.showJobForm);

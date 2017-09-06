@@ -14,18 +14,20 @@ module.exports = {
 
     showExplore: showExplore,
 
-    showJobForm: showJobForm,
-
     showSignUp: showSignUp,
 
     showLogin: showLogin,
 
-    addNewJob: addNewJob,
-
     registerNewUser: registerNewUser,
 
-    authenticateUser: authenticateUser
+    authenticateUser: authenticateUser,
     
+    verifyToken: verifyToken,
+
+    showJobForm: showJobForm,
+    
+    addNewJob: addNewJob
+        
 }
 
 
@@ -63,23 +65,6 @@ function showSignUp(req, res){
 function showLogin(req, res){
     res.render('pages/login');
 }
-
-
-function showJobForm(req, res){
-     res.render('pages/job-add-form');
-}
-
-
-
-function addNewJob(req, res){
-    let job = new Job(req.body);
-    job.save((err, doc) => {
-        if (err) console.error(err);
-        if (!doc){ res.send('job not added'); }
-        else { res.status(201).send('job added!'); }
-    });
-}
-
 
 
 function registerNewUser(req, res){
@@ -161,4 +146,52 @@ function authenticateUser(req, res){
             }
         }
     })
+}
+
+
+
+function verifyToken(req, res, next){
+
+    // check header or url parameters or post parameters for token
+    const token = req.body.token || req.query.token || req.headers['x-access-token'];
+    
+        // decode token
+        if (token){
+            
+            // verifies secret and checks expiration
+            jwt.verify(token, process.env.secret, (err, decoded) => {
+                if (err){
+                    return res.json({ success: false, message: 'Failed to authenticate token'});
+                } else {
+                    // if everything is good, save request for use in other routes
+                    req.decoded = decoded;
+                    next();
+                }
+            });
+        
+        } else {
+            
+            // if there is no token
+            // return an error
+            return res.status(403).send({ success: false, message: 'No token provided.' });
+        
+        }
+
+}
+
+
+
+function showJobForm(req, res){
+    res.render('pages/job-add-form');
+}
+
+
+
+function addNewJob(req, res){
+    let job = new Job(req.body);
+    job.save((err, doc) => {
+        if (err) console.error(err);
+        if (!doc){ res.send('job not added'); }
+        else { res.status(201).send('job added!'); }
+    });
 }
