@@ -27,7 +27,7 @@ module.exports = {
     showJobForm: showJobForm,
     
     addNewJob: addNewJob
-        
+
 }
 
 
@@ -136,13 +136,10 @@ function authenticateUser(req, res){
             } else {
                 // password matches
 
-                // generate token
-                let token = jwt.sign(user, process.env.secret, {
-                    expiresIn: '24h'
-                });
-                // persist token 
+                // from now on we'll identify the user by the email and the email & firstName is the only personalized value that goes into our token 
+                let payload = {email: user.email, firstName: user.firstName}
 
-                res.render('pages/job-add-form', { user: user });
+                res.render('pages/job-add-form', { payload: payload });
             }
         }
     })
@@ -150,32 +147,7 @@ function authenticateUser(req, res){
 
 
 
-function verifyToken(req, res, next){
-
-    // check header or url parameters or post parameters for token
-    const token = req.body.token || req.query.token || req.headers['x-access-token'];
-    
-        // decode token
-        if (token){
-            
-            // verifies secret and checks expiration
-            jwt.verify(token, process.env.secret, (err, decoded) => {
-                if (err){
-                    return res.json({ success: false, message: 'Failed to authenticate token'});
-                } else {
-                    // if everything is good, save request for use in other routes
-                    req.decoded = decoded;
-                    next();
-                }
-            });
-        
-        } else {
-            
-            // if there is no token
-            // return an error
-            return res.status(403).send({ success: false, message: 'No token provided.' });
-        
-        }
+function verifyToken(req, res){
 
 }
 
