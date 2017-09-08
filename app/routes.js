@@ -8,38 +8,17 @@ const express = require('express'),
 module.exports = router;
 
 
-// routing
+// define routes
+
+// home page route
 router.get('/', mainController.showHome);
 
+// show job form route
+router.get('/job-form', mainController.showJobForm);
 
-// retrieve all jobs
-router.get('/all-jobs', (req, res) => {
-    Job.find((err, jobs) => {
-        if (err) {
-        console.error(err);
-        } else {
-            res.json(jobs);
-        }
-    });
-});
+// add new job to database route
+router.post('/add-job', mainController.addNewJob);
 
 
-// featured jobs
-router.get('/featured', (req, res) => {
-    Job.find( {} ).sort( {_id: -1} ).limit(6).exec( (err, featuredJobs) => {
-        if (err){
-            console.error(err);
-        } else {
-            res.json(featuredJobs);
-        }
-        
-    });
-
-});
-
-
-router.post('/add-job', (req, res) => {
-    let job = new Job(req.body);
-    job.save();
-    res.status(201).send('job added!');
-});
+// explore page route
+router.get('/explore', mainController.showExplore);

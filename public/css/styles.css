@@ -81,3 +81,59 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+
+textarea {
+  resize: vertical;
+}
+
+.hero {
+  background-color: #fafafa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form-container {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.form-header {
+  margin-bottom: 50px;
+}
+
+.form-footer {
+  margin-top: 30px;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #1c75bc;
+}
+
+.form-control {
+  border: 0 none #fff;
+  border-radius: 0;
+  background-color: #f2f2f2;
+}
+
+.btn-jobbatical {
+  border-radius: 0;
+  color: #fff;
+  background-color: #03d091;
+  text-transform: uppercase;
+}
+
+.team-info {
+  margin-bottom: 10px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-nav li a {
+  color: #666;
+  text-transform: uppercase;
+}

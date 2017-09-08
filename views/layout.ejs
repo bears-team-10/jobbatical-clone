@@ -26,8 +26,73 @@
     </head>    
     <body>
         <!-- Insert header menu here -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                <li><a href="#"><img src="#" alt="logo"></a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">My Saved Jobs</a></li>
+                <li><a href="#">My Applications</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="#" alt="profile" class="img-circle"> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Action</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </nav>
 
-            <%- body %>
+
+
+        <!-- placehold for body template here -->
+        <%- body %>
+        
+        
         <!-- Insert footer here -->
+        <footer class="container-fluid">
+            <div class="row">
+            <div class="col-sm-2 col-sm-offset-2">
+                <h5>For talent</h5>
+                <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore jobs</a></li>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">My saved jobs</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-sm-offset-1">
+                <h5>For employers</h5>
+                <ul class="list-unstyled">
+                <li><a href="#">Post a job</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-sm-offset-1">
+                <h5>About us</h5>
+                <ul class="list-unstyled">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Linkedin</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="row team-info">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                <span class="small">&copy; Bears Team 10</span>
+                <a class="small" href="mailto:hello@bearsteam10.com">hello@bearsteam10.com</a>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-right">
+                <a class="small" href="#">Terms of service</a>
+                <a class="small" href="#">Privacy policy</a>
+            </div>
+            </div>
+        </footer>
     </body>
 </html>

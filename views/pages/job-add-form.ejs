@@ -1,0 +1,63 @@
+<section class="container-fluid hero">
+  <div class="form-container col-xs-offset-2 col-xs-8">
+    <div class="form-header">
+      <h1>Add a job</h1>
+    </div>
+    <form action="/add-job" method="post">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="job-title">Job title</label>
+          <input class="form-control" type="text" name="jobTitle" id="job-title">
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="date-limit">Date limit</label>
+          <input class="form-control" type="date" name="date" id="date-limit">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="company-name">Company name</label>
+          <input class="form-control" type="text" name="companyName" id="company-name">
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="location">Location</label>
+          <input class="form-control" type="text" name="location" id="location">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="salary">Salary</label>
+          <input class="form-control" type="number" name="salary" id="salary">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company-description">Company description</label>
+        <textarea class="form-control" name="companyDescription" id="company-description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="job-description">Job description</label>
+        <textarea class="form-control" name="jobDescription" id="job-description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="responsibilities">Responsibilities</label>
+        <textarea class="form-control" name="responsibilities" id="responsibilities"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="requirements">Requirements</label>
+        <textarea class="form-control" name="requirements" id="requirements"></textarea>
+      </div>
+
+      <div class="form-footer form-group pull-right">
+        <input class="btn btn-jobbatical" type="submit" value="Post offer">
+      </div>
+
+    </form>
+  </div>
+</section>
