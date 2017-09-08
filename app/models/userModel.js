@@ -47,5 +47,10 @@ userModel.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.local.password);
 }
 
+// capitalize first name
+userModel.methods.capitalize = function(word){
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 
 module.exports = mongoose.model('User', userModel);

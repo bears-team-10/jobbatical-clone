@@ -4,21 +4,15 @@
 const express = require('express'), 
     router = express.Router(),
     mainController = require('./controllers/main.controller'),
-    passport = require('passport'),
-    flash = require('connect-flash'),
-    session = require('express-session');
+    passport = require('passport');
 
 
 require('../config/passport')(passport); // pass passport for configuration
-    
-    
-router.use(session ({ secret: "process.env.secret" })); // session secret
-router.use(passport.initialize());
-router.use(passport.session()); // persistent login sessions
-router.use(flash()); // use connect-flash for flash messages stored in session
 
 
 // define routes
+
+
 
 // home page route
 router.get('/', mainController.showHome);
@@ -35,7 +29,7 @@ router.get('/login', mainController.showLogin);
 
 // add new user to database route
 router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/',
+    successRedirect: '/job-form',
     failureRedirect: '/signup',
     failureFlash: true
 }));
@@ -54,7 +48,9 @@ router.post('/login', passport.authenticate('local-login', {
 router.get('/job-form', isLoggedIn, mainController.showJobForm);
 
 // add new job to database route
-router.post('/add-job', isLoggedIn, mainController.addNewJob);
+router.post('/job-form', isLoggedIn, mainController.addNewJob);
+
+//router.get('/home', isLoggedIn, mainController.showHome);
 
 
 router.get('/logout', (req, res) => {
@@ -69,7 +65,7 @@ function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 }
 
