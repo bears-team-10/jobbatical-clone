@@ -6,7 +6,9 @@ require('dotenv').config();
 
 const Job = require('../models/jobModel'),
     User = require('../models/userModel'),
-    jwt = require('jsonwebtoken');
+    passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy;
+
 
 
 module.exports = {
@@ -17,12 +19,6 @@ module.exports = {
     showSignUp: showSignUp,
 
     showLogin: showLogin,
-
-    registerNewUser: registerNewUser,
-
-    authenticateUser: authenticateUser,
-    
-    verifyToken: verifyToken,
 
     showJobForm: showJobForm,
     
@@ -58,103 +54,19 @@ function showExplore(req, res){
 
 
 function showSignUp(req, res){
-    res.render('pages/sign-up');
+    res.render('pages/signup', { message: req.flash('signupMessage') });
 }
 
 
 function showLogin(req, res){
-    res.render('pages/login');
+    res.render('pages/login', { message: req.flash('loginMessage') });
 }
-
-
-function registerNewUser(req, res){
-        let user = new User(req.body);
-        
-        // validate form: www.validate.js
-        
-
-        // check if email exists
-        User.findOne({
-            email: req.body.email
-        }, (err, userEmail) => {
-            if (err) throw err;
-            if (userEmail){
-                // email exists; registration failed
-                res.send('email exists, please use another email address to register.');
-            } 
-            else {
-                // email not in database, proceed to register user
-                
-                // hash password then save
-                // user.password = 
-
-                  /*
-                bcrypt.hash(user.password, 10, (err, hash) => {
-                    if(err){
-                        console.error(err)
-                    } else {
-                        res.json({hash: hash});
-                    } 
-                })
-                */
-
-
-                // generate token
-                let token = jwt.sign(user, process.env.secret, {
-                    expiresIn: '24h'
-                }); 
-              
-                
-                user.save( err => {
-                    if (err) console.error(err); 
-                    else {
-                        res.json({message: "user registered", token: token});
-                    }
-                });
-                
-            }
-        });
-
-}
-
-
-function authenticateUser(req, res){
-    User.findOne({
-        email: req.body.email
-    }, (err, user) => {
-        if (err) console.error(err);
-        if (!user) {
-            res.send('email not found');
-        }
-        else {
-            // email found
-
-            // check if password matches 
-            if (req.body.password != user.password){
-                // password does not match
-                res.send('password does not match')
-            } else {
-                // password matches
-
-                // from now on we'll identify the user by the email and the email & firstName is the only personalized value that goes into our token 
-                let payload = {email: user.email, firstName: user.firstName}
-
-                res.render('pages/job-add-form', { payload: payload });
-            }
-        }
-    })
-}
-
-
-
-function verifyToken(req, res){
-
-}
-
 
 
 function showJobForm(req, res){
-    res.render('pages/job-add-form');
+    res.render('pages/job-add-form', {
+        user: req.user 
+    });
 }
 
 

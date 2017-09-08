@@ -17,8 +17,9 @@
                         <li><a href="#">Explore Jobs</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">                
-                        <li><a href="#"><% if (payload) %> <%= payload.firstName %></a></li>
+                        <li><a href="#"><% if (user) %> <%= user.local.firstName %></a></li>
                         <li><a href="/job-form">Post Job</a></li>
+                        <li><a href="/logout">Logout</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
