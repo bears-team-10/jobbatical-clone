@@ -5,10 +5,7 @@ require('dotenv').config();
 
 
 const Job = require('../models/jobModel'),
-    User = require('../models/userModel'),
-    passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy;
-
+    User = require('../models/userModel');
 
 
 module.exports = {
