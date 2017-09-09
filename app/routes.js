@@ -43,14 +43,15 @@ router.post('/login', passport.authenticate('local-login', {
 
 
 
-
 // show job form route
 router.get('/job-form', isLoggedIn, mainController.showJobForm);
 
 // add new job to database route
 router.post('/job-form', isLoggedIn, mainController.addNewJob);
 
-//router.get('/home', isLoggedIn, mainController.showHome);
+
+// job details route
+router.get('/job/:id', mainController.showSingleJob);
 
 
 router.get('/logout', (req, res) => {

@@ -113,8 +113,7 @@ textarea {
 }
 
 .form-container h1 {
-  text-align: center;
-  color: #1c75bc;
+      color: #1c75bc;
 }
 
 .form-control {
@@ -141,4 +140,8 @@ textarea {
 .navbar-nav li a {
   color: #666;
   text-transform: uppercase;
+}
+
+.job-group {
+    margin-bottom: 50px;
 }

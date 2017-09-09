@@ -1,0 +1,63 @@
+
+<section class="container-fluid hero">
+    <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <div class="form-container pull-left">
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                        <h1 class="text-uppercase"><%= jobDetails.jobTitle %></h1><br>
+                        <h3 class="text-uppercase text-faded">at <%= jobDetails.companyName %>, <%= jobDetails.location %> </h3><br>
+                        <p>Expires:<strong> <%=jobDetails.date%> </strong></p>
+                    </div>                
+                </div>
+            </div>
+
+            <div class="row">  
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                      <h3><strong>Salary: $<%= jobDetails.salary %></strong></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">  
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                        <h3><strong>Job Description</strong></h3>
+                        <p> <%= jobDetails.jobDescription %> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">  
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                        <h3><strong>Responsibilities</strong></h3>
+                        <p> <%= jobDetails.responsibilities %> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">  
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                        <h3><strong>Requirements</strong></h3>
+                        <p> <%= jobDetails.requirements %> </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">  
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="job-group">
+                        <h3><strong>About <span class="text-uppercase"><%= jobDetails.companyName %></span></strong></h3>
+                        <p> <%= jobDetails.companyDescription %> </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -19,7 +19,9 @@ module.exports = {
 
     showJobForm: showJobForm,
     
-    addNewJob: addNewJob
+    addNewJob: addNewJob,
+
+    showSingleJob: showSingleJob
 
 }
 
@@ -34,7 +36,7 @@ function showHome(req, res) {
         } else if(!featuredJobs){
             res.send('error! Unable to connect to database');
         } else {
-            // if usern
+            // if username exists set to user; if not set as empty string
             let user = req.user ? req.user.local.firstName : '';
             res.render('pages/home', { 
                 featuredJobs: featuredJobs,
@@ -95,4 +97,29 @@ function addNewJob(req, res){
             });
         }
     });
+}
+
+
+function showSingleJob(req, res){
+
+    let uniqueId = req.params.id;
+
+    Job.findOne( {_id: uniqueId}, (err, jobDetails) => {
+        if(err){
+            console.error(err);
+        }
+        if(!jobDetails){
+            res.send('job not found');
+        } 
+        else {
+            let user = req.user ? req.user.local.firstName : '';
+            
+            res.render('pages/job-details', {
+                jobDetails: jobDetails,
+                user: user
+            });
+           // res.json(jobDetails);
+        }
+    });
+
 }

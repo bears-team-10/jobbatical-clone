@@ -32,10 +32,12 @@
 
         <% featuredJobs.forEach( function(element) {
             if (element.jobTitle && element.location){ %>
-                <div class='col-md-4 feature-card'> 
+                <div class='col-md-4 feature-card'>
+                    <a href="/job/<%= element._id %>">
                     <img src='/images/chingu.jpg' class='img-responsive'>
-                        <h4 class='job-title'><%= element.jobTitle %></h4>
-                        <p class='text-uppercase text-faded'><%= element.location %></p>
+                        <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
+                        <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
+                    </a>
                 </div>
 
             <% } %>
