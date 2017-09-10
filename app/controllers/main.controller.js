@@ -52,8 +52,17 @@ function showExplore(req, res){
     Job.find((err, jobs) => {
         if (err) {
         console.error(err);
-        } else {
-            res.json(jobs);
+        } 
+        if (!jobs){
+            res.send("can't display jobs at the moment");
+        }         
+        else {
+            let user = req.user ? req.user.local.firstName : '';
+            
+            res.render('pages/explore-jobs', {
+                jobs: jobs,
+                user: user
+            });
         }
     });
 }

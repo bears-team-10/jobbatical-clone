@@ -1,0 +1,42 @@
+
+
+<!-- Landing Image -->
+<header>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h1 class="super-title">Explore Jobs</h1>
+                <input class="form-control" type="text" name="jobQuery" id="job-query">
+                <input class="btn btn-jobbatical" type="submit" value="Search">                
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Jobs -->
+<section>
+    <div class="container">
+        <div id="jobs" class="container">
+
+        <!-- Build page dynamically -->
+
+        <% jobs.forEach( function(element) {
+            if (element.jobTitle && element.location){ %>
+                <div class='col-md-4 feature-card'>
+                    <a href="/job/<%= element._id %>">
+                    <img src='/images/photo1.jpeg' class='img-responsive job-photo'>
+                        <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
+                        <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
+                    </a>
+                </div>
+
+            <% } %>
+        <% }); %>
+
+        </div>
+        
+        <div class="view-jobs">
+            <a href="#" class="btn btn-success btn-lg text-uppercase">View more jobs</a>
+        </div>
+    </div>
+</section>
