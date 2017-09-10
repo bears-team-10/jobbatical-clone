@@ -20,12 +20,13 @@ router.get('/', mainController.showHome);
 // explore page route
 router.get('/explore', mainController.showExplore);
 
+// search DB for jobs
+router.post('/explore', mainController.searchJobs);
+
+
+
 // show sign-up page route
 router.get('/signup', mainController.showSignUp);
-
-// show login page route
-router.get('/login', mainController.showLogin);
-
 
 // add new user to database route
 router.post('/signup', passport.authenticate('local-signup', {
@@ -33,6 +34,10 @@ router.post('/signup', passport.authenticate('local-signup', {
     failureRedirect: '/signup',
     failureFlash: true
 }));
+
+
+// show login page route
+router.get('/login', mainController.showLogin);
 
 // authenticate user on login
 router.post('/login', passport.authenticate('local-login', {
@@ -69,6 +74,10 @@ function isLoggedIn(req, res, next){
         res.redirect('/login');
     }
 }
+
+
+// create demo data
+// router.get('/seed', mainController.seedDatabase);
 
 
 module.exports = router;
