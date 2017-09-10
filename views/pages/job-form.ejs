@@ -1,9 +1,14 @@
+
+
 <section class="container-fluid hero">
+    <div class="jumbotron text-center">        
+        <h2>Welcome <%= user %></h2>    
+    </div>
   <div class="form-container col-xs-offset-2 col-xs-8">
     <div class="form-header">
       <h1>Add a job</h1>
     </div>
-    <form action="/add-job" method="post">
+    <form action="/job-form" method="post">
       <div class="row">
         <div class="form-group col-sm-6">
           <label for="job-title">Job title</label>
