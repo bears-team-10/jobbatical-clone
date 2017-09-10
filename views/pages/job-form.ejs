@@ -1,0 +1,68 @@
+
+
+<section class="container-fluid hero">
+    <div class="jumbotron text-center">        
+        <h2>Welcome <span class="text-uppercase"><%= user %></span></h2>    
+    </div>
+  <div class="form-container col-xs-offset-2 col-xs-8">
+    <div class="form-header">
+      <h1 class="text-center">Add a Job</h1>
+    </div>
+    <form action="/job-form" method="post">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="job-title">Job title</label>
+          <input class="form-control" type="text" name="jobTitle" id="job-title" required>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="date-limit">Date limit</label>
+          <input class="form-control" type="date" name="date" id="date-limit" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="company-name">Company name</label>
+          <input class="form-control" type="text" name="companyName" id="company-name" required>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="location">Location</label>
+          <input class="form-control" type="text" name="location" id="location" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label for="salary">Salary</label>
+          <input class="form-control" type="number" name="salary" id="salary" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company-description">Company description</label>
+        <textarea class="form-control" name="companyDescription" id="company-description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="job-description">Job description</label>
+        <textarea class="form-control" name="jobDescription" id="job-description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="responsibilities">Responsibilities</label>
+        <textarea class="form-control" name="responsibilities" id="responsibilities" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="requirements">Requirements</label>
+        <textarea class="form-control" name="requirements" id="requirements" required></textarea>
+      </div>
+
+      <div class="form-footer form-group pull-right">
+        <input class="btn btn-jobbatical" type="submit" value="Post offer">
+      </div>
+
+    </form>
+  </div>
+</section>
