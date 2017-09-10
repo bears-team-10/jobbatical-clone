@@ -4,8 +4,9 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
+    background-color: #fafafa;
 }
 
 header {
@@ -19,9 +20,10 @@ header {
     -o-background-size: cover;
     -ms-background-size: cover;
     background-position: center;
-    background-image: url('../images/header.jpg');
+    background-image: url('../images/header1.jpg');
     color: #fff;
 }
+
 
 section {
     padding-top: 80px;
@@ -74,7 +76,20 @@ footer {
 .feature-card {
     margin-top: 40px;
     margin-bottom: 60px;
+    background-color: white;
 }
+
+@media (max-width: 768px){
+    .feature-card{
+        padding: 0;
+        border: 1px solid #eee;
+    }
+
+    .feature-text {
+        padding: 5px 10px 40px 10px;
+    }
+}
+
 
 .job-title {
     font-size: 28px;
@@ -93,7 +108,6 @@ textarea {
 }
 
 .hero {
-  background-color: #fafafa;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -113,8 +127,7 @@ textarea {
 }
 
 .form-container h1 {
-  text-align: center;
-  color: #1c75bc;
+      color: #1c75bc;
 }
 
 .form-control {
@@ -130,9 +143,6 @@ textarea {
   text-transform: uppercase;
 }
 
-.team-info {
-  margin-bottom: 10px;
-}
 
 .navbar {
   margin-bottom: 0;
@@ -141,4 +151,49 @@ textarea {
 .navbar-nav li a {
   color: #666;
   text-transform: uppercase;
+}
+
+.job-group {
+    margin-bottom: 50px;
+}
+
+
+#search-wrapper {
+    padding: 50px 15px;
+}
+
+#search-btn {
+    margin-top: 20px;
+}
+
+.search-input{
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+
+h4, .team-info {
+    margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    border-bottom: 1px solid #999;
+    font-weight: bold;    
+}
+
+.team-info {
+    margin-bottom: 20px;    
+}
+
+footer {
+    border-top: 1px solid #999;
+    padding-top: 20px;
+    margin-top: 80px;
+    width: 90%;
+}
+
+.social-icons {
+    margin-bottom: 15px;
 }

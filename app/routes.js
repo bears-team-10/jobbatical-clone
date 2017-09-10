@@ -20,12 +20,13 @@ router.get('/', mainController.showHome);
 // explore page route
 router.get('/explore', mainController.showExplore);
 
+// search DB for jobs
+router.post('/explore', mainController.searchJobs);
+
+
+
 // show sign-up page route
 router.get('/signup', mainController.showSignUp);
-
-// show login page route
-router.get('/login', mainController.showLogin);
-
 
 // add new user to database route
 router.post('/signup', passport.authenticate('local-signup', {
@@ -33,6 +34,10 @@ router.post('/signup', passport.authenticate('local-signup', {
     failureRedirect: '/signup',
     failureFlash: true
 }));
+
+
+// show login page route
+router.get('/login', mainController.showLogin);
 
 // authenticate user on login
 router.post('/login', passport.authenticate('local-login', {
@@ -43,14 +48,15 @@ router.post('/login', passport.authenticate('local-login', {
 
 
 
-
 // show job form route
 router.get('/job-form', isLoggedIn, mainController.showJobForm);
 
 // add new job to database route
 router.post('/job-form', isLoggedIn, mainController.addNewJob);
 
-//router.get('/home', isLoggedIn, mainController.showHome);
+
+// job details route
+router.get('/job/:id', mainController.showSingleJob);
 
 
 router.get('/logout', (req, res) => {
@@ -68,6 +74,10 @@ function isLoggedIn(req, res, next){
         res.redirect('/login');
     }
 }
+
+
+// create demo data
+// router.get('/seed', mainController.seedDatabase);
 
 
 module.exports = router;
