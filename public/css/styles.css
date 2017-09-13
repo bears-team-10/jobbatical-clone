@@ -36,7 +36,7 @@ footer {
 }
 
 .super-title {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
     margin-bottom: 50px;
 }
@@ -52,9 +52,18 @@ footer {
 
 @media (min-width: 768px) {
     .landing-button {
-        width: auto;
-        margin-right: 30px
+        width: 250px;
     }
+
+    
+    #landing-button-explore {
+        margin-left: 15px;        
+    }
+
+    #landing-button-post-job {
+        margin-right: 15px;        
+    }
+
 }
 
 .landing-button-text {
