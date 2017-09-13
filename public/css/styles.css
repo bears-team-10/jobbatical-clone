@@ -77,31 +77,47 @@ footer {
 
 .section-title {
     font-size: 30px;
-    color: blue;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 5px;
 }
 
 .feature-card {
     margin-top: 40px;
     margin-bottom: 60px;
     background-color: white;
+    padding: 0;
+    border: 1px solid #eee;   
+    border-radius: 6px;
+     
 }
 
-@media (max-width: 768px){
-    .feature-card{
-        padding: 0;
-        border: 1px solid #eee;
-    }
+.feature-text {
+    padding: 5px 10px 0px 10px;
+    height: 200px;
+    color: blue;
+}
 
-    .feature-text {
-        padding: 5px 10px 40px 10px;
+@media (min-width: 768px) and (max-width: 991px){
+    .feature-card{
+        width: 46%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+@media (min-width: 992px){
+    .feature-card{
+        width: 29.3333333%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
 
 .job-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
 }
 

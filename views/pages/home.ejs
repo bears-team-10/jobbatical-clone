@@ -24,31 +24,29 @@
 
 <!-- Featured Jobs -->
 <section>
-    <div class="container">
-        <h2 class="section-title">Featured Jobs</h2>
-        <div id="featuredJobs" class="container">
-
-        <!-- Build page dynamically -->
-
-        <% featuredJobs.forEach( function(element, index) {
-            if (element.jobTitle && element.location){ %>
-                <div class='col-md-4 col-sm-6 feature-card'>
-                    <a href="/job/<%= element._id %>">
-                    <img src='/images/<%=photos[index]%>' class='img-responsive img-rounded job-photo'>
-                        <div class="feature-text">
-                            <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
-                            <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
-                        </div>
-                    </a>
-                </div>
-
-            <% } %>
-        <% }); %>
-
-        </div>
+    <div id="featuredJobs" class="container">
+    <h2 class="section-title">Featured Jobs</h2>
         
-        <div class="view-jobs">
-            <a href="/explore" class="btn btn-success btn-lg text-uppercase">Explore jobs</a>
-        </div>
+    <!-- Build page dynamically -->
+
+    <% featuredJobs.forEach( function(element, index) {
+        if (element.jobTitle && element.location){ %>
+            <div class='col-xs-12 feature-card'>
+                <a href="/job/<%= element._id %>">
+                <img src='/images/<%=photos[index]%>' class='img-responsive img-rounded job-photo'>
+                    <div class="feature-text">
+                        <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
+                        <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
+                    </div>
+                </a>
+            </div>
+
+        <% } %>
+    <% }); %>
+
+    </div>
+    
+    <div class="view-jobs">
+        <a href="/explore" class="btn btn-success btn-lg text-uppercase">Explore jobs</a>
     </div>
 </section>
