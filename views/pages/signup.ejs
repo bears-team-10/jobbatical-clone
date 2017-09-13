@@ -1,29 +1,27 @@
 
 
     <section class="container-fluid hero">
-            <div class="row">
-                <div class="form-container col-md-4 col-md-offset-4">
-                    <h2 class="super-title">Join Us<br><span class="job-title">( Employers Only )</span></h2>
-                    <!-- Register Form -->
+        <div class="form-container col-md-4 col-md-offset-4">
+            <h2 class="super-title">Join Us<br><span class="job-title">( Employers Only )</span></h2>
+            <!-- Register Form -->
 
-                    <% if (message.length > 0) { %>
-                        <div class="alert alert-danger"><%= message %></div>
-                    <% } %>
-                    <form action="/signup" method="post">
-                        <div class="form-group">
-                            <label for="inputFirstName">First Name</label>
-                            <input type="text" name="firstName" class="form-control" placeholder="Enter First Name" minlength="4" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Enter Password" minlength="6" required>     
-                        </div>
-                        <button type="submit" class="btn btn-jobbatical">Submit</button>
-                    </form>
+            <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" name="firstName" class="form-control" placeholder="Enter First Name" minlength="4" required>
                 </div>
-            </div>
-        </section>
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter Password" minlength="6" required>     
+                </div>
+                <button type="submit" class="btn btn-jobbatical">Submit</button>
+            </form>
+        </div>
+    </section>
