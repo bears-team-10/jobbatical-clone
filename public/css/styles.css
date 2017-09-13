@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
     font-size: 18px;
     background-color: #fafafa;
 }
@@ -162,10 +162,12 @@ textarea {
 }
 
 .btn-jobbatical {
-  border-radius: 0;
-  color: #fff;
-  background-color: #03d091;
-  text-transform: uppercase;
+    color: #fff;
+    background-color: #18b182;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 20px;
 }
 
 
@@ -186,17 +188,6 @@ textarea {
 #search-wrapper {
     padding: 50px 15px;
 }
-
-#search-btn {
-    margin-top: 20px;
-}
-
-.search-input{
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-
 
 h4, .team-info {
     margin-top: 60px;

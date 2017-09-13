@@ -152,7 +152,6 @@ function searchJobs(req, res){
         }
         else{
             let user = req.user ? req.user.local.firstName : '';
-            
             res.render('pages/explore-jobs', {
                 jobs: jobs,
                 user: user,
