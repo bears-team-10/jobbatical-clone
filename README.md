@@ -60,7 +60,7 @@ To use backend API's alone, please use the following instructions.
 - [Express](https://expressjs.com/en/starter/installing.html) - Web Framework
 - [EJS](http://ejs.co/) - Templating Engine
 - [mLab](https://mlab.com/) - Database 
-- [Heroku](https://www.heroku,com) - Hosting and Continuous Deployment
+- [Heroku](https://www.heroku.com) - Hosting and Continuous Deployment
 - [VS Code](https://code.visualstudio.com/) - Code Editor
 - [Chrome](https://www.google.com/chrome/browser/desktop/index.html) - Browser
 
