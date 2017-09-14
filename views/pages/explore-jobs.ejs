@@ -1,46 +1,38 @@
 
-
-<!-- Landing Image -->
-<header id="search-wrapper">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-xs-12 col-md-8 col-md-offset-2">
-                <h1 class="super-title">Explore Jobs</h1>
-                <form action="#" method="post">
-                    <input class="form-control search-input" type="text" name="jobTitle" id="job-query" placeholder="Search by job title">
-                    <input class="btn btn-lg btn-jobbatical search-input" id="search-btn" type="submit" value="Search">             
-                </form>
+        <!-- Landing Image -->
+        <header id="search-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+                        <h1 class="super-title">Explore Jobs</h1>
+                        <form action="/explore" method="post">
+                            <input class="form-control" type="text" name="jobTitle" placeholder="Search by Job Title">
+                            <input class="btn btn-lg btn-jobbatical" type="submit" value="Search">             
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</header>
+        </header>
 
-<!-- Featured Jobs -->
-<section>
-    <div class="container">
-        <div id="jobs" class="container">
-
-        <!-- Build page dynamically -->
-
-        <% jobs.forEach( function(element, index) {
-            if (element.jobTitle && element.location){ %>
-                <div class='col-md-4 feature-card'>
+        <!-- Display a lot of Jobs -->
+        <section>
+            <div class="container">        
+            <!-- Build page dynamically -->
+            <% jobs.forEach( element => { %>
+                <div class='col-xs-12 feature-card'>
                     <a href="/job/<%= element._id %>">
                     <img src='/images/<%=photos[0]%>' class='img-responsive img-rounded job-photo'>
-                    <div class="feature-text">  
-                        <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
-                        <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
+                    <div class="feature-text text-uppercase">  
+                        <h4 class='job-title'><%= element.jobTitle %></h4>
+                        <p class='text-faded'>at <%= element.companyName %>, <%= element.location %></p>
                     </div>
                     </a>
                 </div>
-
-            <% } %>
-        <% }); %>
-
-        </div>
-        
-        <div class="view-jobs">
-            <a href="#" class="btn btn-success btn-lg text-uppercase">View more jobs</a>
-        </div>
-    </div>
-</section>
+            <% }); %>
+            </div>
+            
+            <!-- get more jobs from DB -->
+            <div class="view-jobs">
+                <a href="#" class="btn btn-lg btn-jobbatical">View more jobs</a>
+            </div>
+        </section>
