@@ -45,7 +45,7 @@ To use backend API's alone, please use the following instructions.
 
  - Web Browser (Chrome, or Mozilla, or Safari, or Opera, or Microsoft Edge )
 
- #### For Developerss:
+ #### For Developers:
  - [Git](https://git-for-windows.github.io/)
  - [Node.js](https://nodejs.org/en/download/)
  - [MonogDb](https://www.mongodb.com/download-center#community)
@@ -60,16 +60,16 @@ To use backend API's alone, please use the following instructions.
 - [Express](https://expressjs.com/en/starter/installing.html) - Web Framework
 - [EJS](http://ejs.co/) - Templating Engine
 - [mLab](https://mlab.com/) - Database 
-- [Heroku](www.heroku,com) - Hosting and Continuous Deployment
+- [Heroku](https://www.heroku,com) - Hosting and Continuous Deployment
 - [VS Code](https://code.visualstudio.com/) - Code Editor
 - [Chrome](https://www.google.com/chrome/browser/desktop/index.html) - Browser
 
 
 ## Authors
 
-* [Bolu Ajibawo](github.com/ajibs)
-* [Lidiya Nikolova](github.com/l-emi)
-* [Floo None](github.com/floonone)
+* [Bolu Ajibawo](https://github.com/ajibs)
+* [Lidiya Nikolova](https://github.com/l-emi)
+* [Floo None](https://github.com/floonone)
 
 
 ## Acknowledgments
