@@ -1,52 +1,50 @@
 
-
-<!-- Landing Image -->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12  text-center">
-                <h1 class="super-title">Hire Talent!</h1>
-                <a href="/job-form" id="landing-button-post-job" class="btn btn-primary btn-lg landing-button">
-                    <i class="fa fa-users fa-lg" aria-hidden="true"></i>
-                    <span class="landing-button-text">Post a Job<span>
-                </a>
-                <a href="/explore" id="landing-button-explore" class="btn btn-primary btn-lg landing-button">
-                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                    <span class="landing-button-text">Explore Jobs<span>
-                </a>
-                <p class="sub-text">
-                    Currently <span class="text-uppercase"><strong>48 teams</strong></span> in <span class="text-uppercase"><strong>27 countries</strong></span><br> could use your help!
-                </p>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Featured Jobs -->
-<section>
-    <div id="featuredJobs" class="container">
-        <h2 class="section-title">Featured Jobs</h2>
-            
-        <!-- Build page dynamically -->
-
-        <% featuredJobs.forEach( function(element, index) {
-            if (element.jobTitle && element.location){ %>
-                <div class='col-xs-12 feature-card'>
-                    <a href="/job/<%= element._id %>">
-                    <img src='/images/<%=photos[index]%>' class='img-responsive img-rounded job-photo'>
-                        <div class="feature-text">
-                            <h4 class='job-title text-uppercase'><%= element.jobTitle %></h4>
-                            <p class='text-uppercase text-faded'>at <%= element.companyName %>, <%= element.location %></p>
-                        </div>
-                    </a>
+        <!-- Landing Image -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="super-title">Hire Talent!</h1>
+                        <a href="/job-form" id="landing-button-post-job" class="btn btn-primary btn-lg landing-button">
+                            <i class="fa fa-users fa-lg" aria-hidden="true"></i>
+                            <span class="landing-button-text">Post a Job<span>
+                        </a>
+                        <a href="/explore" id="landing-button-explore" class="btn btn-primary btn-lg landing-button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            <span class="landing-button-text">Explore Jobs<span>
+                        </a>
+                        <p class="sub-text">
+                            <span class="sub-inner-text">48 teams</span> in <span class="sub-inner-text">27 countries</span>
+                            <br>
+                            are available for hire
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </header>
 
-            <% } %>
-        <% }); %>
-
-    </div>
-    
-    <div class="view-jobs">
-        <a href="/explore" class="btn btn-lg btn-jobbatical">Explore jobs</a>
-    </div>
-</section>
+        <!-- Featured Jobs -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Featured Jobs</h2>
+                    
+                <!-- Build page dynamically -->
+                <% featuredJobs.forEach( (element, index) => {
+                    if (element.jobTitle && element.location){ %>
+                        <div class='col-xs-12 feature-card'>
+                            <a href="/job/<%= element._id %>">
+                            <img src='/images/<%=photos[index]%>' class='img-responsive img-rounded job-photo'>
+                                <div class="feature-text text-uppercase">
+                                    <h4 class='job-title'><%= element.jobTitle %></h4>
+                                    <p class='text-faded'>at <%= element.companyName %>, <%= element.location %></p>
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
+                <% }); %>
+            </div>
+            
+            <div class="view-jobs">
+                <a href="/explore" class="btn btn-lg btn-jobbatical">Explore jobs</a>
+            </div>
+        </section>

@@ -24,10 +24,9 @@ header {
     color: #fff;
 }
 
-
 section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 footer {
@@ -53,17 +52,15 @@ footer {
 @media (min-width: 768px) {
     .landing-button {
         width: 250px;
-    }
-
+    }    
     
     #landing-button-explore {
         margin-left: 15px;        
     }
-
+    
     #landing-button-post-job {
         margin-right: 15px;        
     }
-
 }
 
 .landing-button-text {
@@ -73,6 +70,11 @@ footer {
 
 .sub-text {
     margin-top: 50px;
+}
+
+.sub-inner-text {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .section-title {
@@ -89,8 +91,7 @@ footer {
     background-color: white;
     padding: 0;
     border: 1px solid #eee;   
-    border-radius: 6px;
-     
+    border-radius: 6px;     
 }
 
 .feature-text {
@@ -115,7 +116,6 @@ footer {
     }
 }
 
-
 .job-title {
     font-size: 22px;
     font-weight: bold;
@@ -127,14 +127,8 @@ footer {
     align-items: center;
 }
 
-
 textarea {
   resize: vertical;
-}
-
-.hero {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .form-container {
@@ -166,20 +160,19 @@ textarea {
     margin-top: 20px;
 }
 
-
 .navbar {
   margin-bottom: 0;
 }
 
-.navbar-nav li a {
-  color: #666;
-  text-transform: uppercase;
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .job-group {
     margin-bottom: 50px;
 }
-
 
 #search-wrapper {
     padding: 50px 15px;
