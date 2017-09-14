@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
     font-size: 18px;
     background-color: #fafafa;
 }
@@ -24,10 +24,9 @@ header {
     color: #fff;
 }
 
-
 section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 footer {
@@ -36,7 +35,7 @@ footer {
 }
 
 .super-title {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
     margin-bottom: 50px;
 }
@@ -52,8 +51,15 @@ footer {
 
 @media (min-width: 768px) {
     .landing-button {
-        width: auto;
-        margin-right: 30px
+        width: 250px;
+    }    
+    
+    #landing-button-explore {
+        margin-left: 15px;        
+    }
+    
+    #landing-button-post-job {
+        margin-right: 15px;        
     }
 }
 
@@ -66,33 +72,52 @@ footer {
     margin-top: 50px;
 }
 
+.sub-inner-text {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .section-title {
     font-size: 30px;
-    color: blue;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 5px;
 }
 
 .feature-card {
     margin-top: 40px;
     margin-bottom: 60px;
     background-color: white;
+    padding: 0;
+    border: 1px solid #eee;   
+    border-radius: 6px;     
 }
 
-@media (max-width: 768px){
+.feature-text {
+    padding: 5px 10px 0px 10px;
+    height: 200px;
+    color: blue;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
     .feature-card{
-        padding: 0;
-        border: 1px solid #eee;
-    }
-
-    .feature-text {
-        padding: 5px 10px 40px 10px;
+        width: 46%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
+@media (min-width: 992px){
+    .feature-card{
+        width: 29.3333333%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
 
 .job-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -102,14 +127,8 @@ footer {
     align-items: center;
 }
 
-
 textarea {
   resize: vertical;
-}
-
-.hero {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .form-container {
@@ -126,10 +145,6 @@ textarea {
   margin-top: 30px;
 }
 
-.form-container h1 {
-      color: #1c75bc;
-}
-
 .form-control {
   border: 0 none #fff;
   border-radius: 0;
@@ -137,41 +152,31 @@ textarea {
 }
 
 .btn-jobbatical {
-  border-radius: 0;
-  color: #fff;
-  background-color: #03d091;
-  text-transform: uppercase;
+    color: #fff;
+    background-color: #18b182;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 20px;
 }
-
 
 .navbar {
   margin-bottom: 0;
 }
 
-.navbar-nav li a {
-  color: #666;
-  text-transform: uppercase;
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .job-group {
     margin-bottom: 50px;
 }
 
-
 #search-wrapper {
     padding: 50px 15px;
 }
-
-#search-btn {
-    margin-top: 20px;
-}
-
-.search-input{
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-
 
 h4, .team-info {
     margin-top: 60px;
