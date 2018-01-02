@@ -14,30 +14,6 @@ Jobbatical facilitates hiring by allowing users (employers) post jobs on the app
 Jobbatical is hosted on heroku and can be accessed here:
  - [Production](https://jobbatical.herokuapp.com/)
 
-To use backend API's alone, please use the following instructions. 
-  - Download and install [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
-  - Make sure you have working internet
-  - Use the Service API's below with Postman (See how in: Using Postman, below)
-
-### Service API's:
-  - [Signup](https://jobbatical.herokuapp.com/signup): Uses firstName, email and password
-  - [Login](https://jobbatical.herokuapp.com/login): Uses email and password
-  - [Post Job](https://jobbatical.herokuapp.com/job-form): Takes in the job details, user must be logged in
-  - [Search Job](https://jobbatical.herokuapp.com/explore): Uses job title
-
-
-### Using Postman:
- - Install [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
- - In the Postman window, populate the url window with the API endpoint you want to take for a test run.
- - For the Service API's listed above, click on the dropdown by the right of the url window, change from get to post
- - Click on the body tab, select the radio button: x-www-form-urlencoded
- - Populate the request body with the appropriate key value pairs: 
-      - Signup : keys - firstName, email, password
-      - Login: keys - email, password
-      - Post Job: keys - jobTitle, companyName, location, salary, date, companyDescription, jobDescription, responsibilities, requirements
-      - Search Job: keys - jobTitle
-- Click on Send
-
 ## Prerequisites
  These are what you need installed on your computer to use the application:
 
