@@ -20,6 +20,7 @@ Jobbatical is hosted on heroku and can be accessed here:
  - Web Browser (Chrome, or Mozilla, or Safari, or Opera, or Microsoft Edge )
 
  #### For Developers:
+ - [Git](https://git-scm.com/)
  - [Node.js](https://nodejs.org/en/download/)
  - [MongoDb](https://www.mongodb.com/download-center#community)
  - [Yarn](https://yarnpkg.com/en/docs/install)
